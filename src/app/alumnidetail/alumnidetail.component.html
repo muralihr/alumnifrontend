@@ -1,0 +1,161 @@
+
+
+<!--container close-->
+<div id="sticky" class="container" *ngIf="alumni">
+   <div class="row">
+     
+      <div class="col-sm-3">
+         <!--left col-->
+         <ul class="list-group">
+            <li class="list-group-item text-muted" contenteditable="false">Profile</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">First Name</strong></span>{{alumni.firstName}}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Middle Name</strong></span> {{alumni.lastName}}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">last name</strong></span> {{alumni.middleName}}              </li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Role: </strong></span>   {{alumni.job}}        </li>
+         </ul>
+         <div class="panel panel-default">
+            <div class="panel-heading">Insured / Bonded?
+            </div>
+            <div class="panel-body"><i style="color:green" class="fa fa-check-square"></i> Yes, I am insured and bonded.
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">Website <i class="fa fa-link fa-1x"></i>
+            </div>
+            <div class="panel-body"><a href="{{alumni.personalWebPage1}}" class="">
+               {{alumni.personalWebPage1}}
+               </a>
+               <a href="{{alumni.personalWebPage2}}" class="">
+               {{alumni.personalWebPage2}}</a>
+            </div>
+         </div>
+         <ul class="list-group">
+            <li class="list-group-item text-muted">Activity <i class="fa fa-dashboard fa-1x"></i>
+            </li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Email</strong></span>{{alumni.primaryEmail}}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">AL email</strong></span> {{alumni.alternateEmail}}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Mobile</strong></span> {{alumni.telephoneMobile}}</li>
+            <li class="list-group-item text-right"><span class="pull-left"><strong class="">Landline</strong></span>{{alumni.telephoneLandline}}</li>
+         </ul>
+         <div class="panel panel-default">
+            <div class="panel-heading">Social Media</div>
+            <div class="panel-body">	<i class="fa fa-facebook fa-2x">{{alumni.facebookLink}}</i>  <i class="fa fa-github fa-2x"></i> 
+               <i class="fa fa-twitter fa-2x">{{alumni.twitter}}</i> <i class="fa fa-pinterest fa-2x">{{alumni.instagram}}</i>  <i class="fa fa-google-plus fa-2x">{{alumni.blog1}}</i>
+            </div>
+         </div>
+      </div>
+      <!--/col-3-->
+      <div class="col-sm-9" style="" contenteditable="false">
+         <div class="panel panel-default">
+            <div class="panel-heading">  Bio</div>
+            <div class="panel-body"> A long description about me.
+            </div>
+         </div>
+         <div class="panel panel-default target">
+            <div class="panel-heading" contenteditable="false">My pictures</div>
+            <div class="panel-body">
+               <div class="row">
+                  <div class="col-md-4">
+                     <div class="thumbnail">
+                        <img alt="300x200" src="https://d30y9cdsu7xlg0.cloudfront.net/png/78487-200.png">
+                        <div class="caption">
+                           <h3>
+                              DEFAULT
+                           </h3>
+                           <p>
+                              FRESHMAN
+                           </p>
+                           <p>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="thumbnail">
+                        <img alt="300x200" src="http://ww1.prweb.com/prfiles/2012/03/14/9284500/gI_84389_icon.png">
+                        <div class="caption">
+                           <h3>
+                              DEFAULT
+                           </h3>
+                           <p>
+                              GRADUATION
+                           </p>
+                           <p>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4">
+                     <div class="thumbnail">
+                        <img alt="300x200" src="https://cdn3.iconfinder.com/data/icons/law-and-justice-icons/512/Mug_Shot-512.png">
+                        <div class="caption">
+                           <h3>
+                              DEFAULT
+                           </h3>
+                           <p>
+                              RECENT
+                           </p>
+                           <p>
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">Starfox221's Bio</div>
+            <div class="panel-body">
+               dd
+               <p>{{alumni.job}}</p>
+               <p>{{alumni.company}}</p>
+               <p>{{alumni.companyURL}}</p>
+               <p>{{alumni.workAddress}}</p>
+               <p>{{alumni.workEmail}}</p>
+               <p>{{alumni.workTelephone}}</p>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">Life </div>
+            <div class="panel-body">
+               <p>{{alumni.life_Bullet_1}}</p>
+               <p>{{alumni.life_Bullet_2}}</p>
+               <p>{{alumni.life_Bullet_3}}</p>
+               <p>{{alumni.life_Bullet_4}}</p>
+               <p>{{alumni.life_Bullet_5}}</p>
+               <p>{{alumni.life_Bullet_6}}</p>
+               <p>{{alumni.life_Bullet_7}}</p>
+               <p>{{alumni.life_Bullet_8}}</p>
+               <p>{{alumni.life_Bullet_9}}</p>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">Life After Graduation</div>
+            <div class="panel-body">
+               <p>{{alumni.after_Grad_Bullet_1}}</p>
+               <p>{{alumni.after_Grad_Bullet_2}}</p>
+               <p>{{alumni.after_Grad_Bullet_3}}</p>
+               <p>{{alumni.after_Grad_Bullet_4}}</p>
+               <p>{{alumni.after_Grad_Bullet_5}}</p>
+               <p>{{alumni.after_Grad_Bullet_6}}</p>
+               <p>{{alumni.after_Grad_Bullet_7}}</p>
+               <p>{{alumni.after_Grad_Bullet_8}}</p>
+               <p>{{alumni.after_Grad_Bullet_9}}</p>
+            </div>
+         </div>
+         <div class="panel panel-default">
+            <div class="panel-heading">Starfox221's Bio</div>
+            <div class="panel-body">
+               dd
+               <p>{{alumni.job}}</p>
+               <p>{{alumni.company}}</p>
+               <p>{{alumni.companyURL}}</p>
+               <p>{{alumni.workAddress}}</p>
+               <p>{{alumni.workEmail}}</p>
+               <p>{{alumni.workTelephone}}</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
