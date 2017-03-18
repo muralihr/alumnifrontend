@@ -9,6 +9,13 @@
                 <strong>Failed to sign in!</strong> Please check your credentials and try again.
             </div>
         </div>
+
+
+           <div class="col-md-8 offset-md-2">
+            <div class="alert alert-info" *ngIf="loggedIn" >
+                <strong></strong> loggedIn as {{username}}
+            </div>
+        </div>
         <div class="col-md-6">
             <form class="form" role="form" (ngSubmit)="login()">
                 <div class="form-group">

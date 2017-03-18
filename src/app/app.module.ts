@@ -6,10 +6,10 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { Ng2Webstorage } from 'ng2-webstorage';
 import { AppComponent } from './app.component';
 import { AlumniComponent } from './alumni/alumni.component';
+import { FilterPipe } from './filter.pipe';
 import { AlumniCardComponent } from './alumni-card/alumni-card.component';
 import { AlumniDetailComponent } from './alumnidetail/alumnidetail.component';
 import { NgUploaderModule } from 'ngx-uploader';
-import { UploadComponent } from './upload/upload.component';
 
 import { DemoComponent } from './demo/demo.component';
 
@@ -19,17 +19,18 @@ import { appRoutes } from './app.routes';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login.service';
 import { AuthServerProviderService } from './auth-server-provider.service';
-
+import { FileSelectDirective, FileDropDirective } from 'ng2-file-upload';
  
 @NgModule({
   declarations: [
     AppComponent,
     AlumniComponent,
     AlumniCardComponent,
-    UploadComponent,
     DemoComponent ,
     AlumniDetailComponent, 
-    LoginComponent
+    LoginComponent,
+    FilterPipe,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,

@@ -9,7 +9,7 @@ import { LoginComponent } from './login/login.component';
  
 import { DemoComponent } from './demo/demo.component';
 
-import { UploadComponent } from './upload/upload.component';
+
 
 
 
@@ -18,12 +18,12 @@ export const appRoutes: Routes = [
     
     //AlumniComponent
     
-    {path: 'demo', component: DemoComponent},
+    {path: 'upload', component: DemoComponent},
         
     {path: 'alumni', component: AlumniComponent},
     
     {path: 'login', component: LoginComponent},
-    {path: 'upload', component: UploadComponent},
+    
     {path: 'alumni/:id', component: AlumniDetailComponent} 
     //UploadComponent
    

@@ -6,12 +6,32 @@
   <form>
     <div class="form-group">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for ALumni..." [(ngModel)]="searchStr" name="searchStr" (keyup.enter)="searchMovies()">
+        <input type="text" class="form-control" placeholder="Search for ALumni..." [(ngModel)]="searchStr" name="searchStr" (keyup.enter)="searchAlumni()">
         <span class="input-group-btn">
-          <button class="btn btn-primary" type="button" (click)="searchMovies()">Go!</button>
+          <button class="btn btn-primary" type="button" (click)="searchAlumni()">Go!</button>
         </span>
       </div>
+      
       <!-- /input-group -->
+      <div class="input-controls">
+    <h4>searchBy </h4>
+    <div>
+        <label>
+            <input #firstName name="searchBy" type="radio" value="firstName" (click)="searchBy = firstName.value" />
+            FirstName
+        </label>
+    </div>
+    <div>
+        <label>
+            <input #cornellId name="searchBy" type="radio"  value="cornellId" (click)="searchBy = cornellId.value" />
+            CornellId
+        </label>
+    </div>
+    <div>
+        searchBy   is <strong>{{searchBy}}</strong>
+        searchStr   is <strong>{{searchStr}}</strong>
+    </div>
+</div>
     </div>
   </form>
 </div>
@@ -19,7 +39,7 @@
 
 <h3 class="orange-text">Alumni</h3>
 <div class="row is-flex">
-  <div class="col-sm-3" *ngFor="let alumni of popularList; let i = index;">
+  <div class="col-sm-3" *ngFor="let alumni of popularList| filter: peopleFilter;  let i = index;">
     <alumni-card [alumni]="alumni"></alumni-card>
   </div>
 </div>

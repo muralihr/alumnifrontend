@@ -11,35 +11,23 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class AlumniService {
   apikey: string;
-  private mapUrl = 'http://localhost:8080/api/alumni'; 
-  private mapUrl2 = 'http://localhost:8080/api/alumni/';
+  private mapUrl = 'http://196.12.53.138:8086/api/alumni'; 
+  private mapUrl2 = 'http://196.12.53.138:8086/api/alumni/';
+  private mapUrl3 = 'http://196.12.53.138:8086/api/alumni-photos_alumni_id/';
 
   
   constructor(private _jsonp: Jsonp, public http: Http) {
     this.apikey = 'fed69657ba4cc6e1078d2a6a95f51c8c';
     console.log('AlumniService service is ready');
   }
-
- /* getPopular() {
-    var search = new URLSearchParams();
-    search.set('sort_by','popularity.desc');
-    search.set('api_key', this.apikey);
-    return this._jsonp.get('https://api.themoviedb.org/3/discover/movie?callback=JSONP_CALLBACK', {search})
-      .map(res => {
-        return res.json();
-      })
-  }*/
-
-     getPopular() : Observable<AlumniUserProfile[]>{
+  getPopular() : Observable<AlumniUserProfile[]>{
          // ...using get request
 
       let authToken = localStorage.getItem('auth_token');
       let headers = new Headers({ 'Accept': 'application/json' });
       console.log('token' + authToken );
       headers.append('Authorization', 'Bearer  '+authToken);
-
       let options = new RequestOptions({ headers: headers });
-
 
          return this.http.get(this.mapUrl,options)
                         // ...and calling .json() on the response to return data
@@ -70,6 +58,26 @@ export class AlumniService {
 
     
   }
-   
+  //
+  getAlumniPhotoLinks(id: string) {
+
+      
+      let authToken = localStorage.getItem('auth_token');
+      let headers = new Headers({ 'Accept': 'application/json' });
+      console.log('token' + authToken );
+      headers.append('Authorization', 'Bearer  '+authToken);
+
+      
+      let options = new RequestOptions({ headers: headers });
+
+
+         return this.http.get(this.mapUrl3+id, options)
+                        // ...and calling .json() on the response to return data
+                         .map((res:Response) => res.json())
+                         //...errors if any
+                         .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+
+    
+  }
   
 }

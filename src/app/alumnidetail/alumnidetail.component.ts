@@ -10,6 +10,7 @@ import {AlumniService} from '../alumni.service';
 })
 export class AlumniDetailComponent implements OnInit {
   alumni : Object;
+  picturesList: Array<Object>;
   
   constructor(
     private _alumniServices: AlumniService,
@@ -22,9 +23,18 @@ export class AlumniDetailComponent implements OnInit {
   ngOnInit() {
     this.router.params.subscribe((params) => {
       const id = params['id'];
+
+          
+
+
       this._alumniServices.getAlumni(id).subscribe(movie => {
         this.alumni = movie;
       });
+
+      this._alumniServices.getAlumniPhotoLinks(id).subscribe(res => {
+          this.picturesList = res;
+          
+            });
       
       
     })

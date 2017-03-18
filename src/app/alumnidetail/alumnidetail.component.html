@@ -156,6 +156,23 @@
             </div>
          </div>
       </div>
+
+ <li *ngFor="let p of picturesList">
+       {{p.title}}
+    </li>
+      <h3 class="orange-text">Alumni Pictures</h3>
+        <div class="row is-flex">
+        <div class="col-sm-3" *ngFor="let p of picturesList ;  let i = index;">
+            {{p.urlOrfileLink}}
+            {{p.title}}
+            <p>
+            <img src="{{p.urlOrfileLink}}"/>
+            </p>
+
+        </div>
+        </div>
+
+
    </div>
 </div>
 
