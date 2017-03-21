@@ -44,7 +44,7 @@ emitNavChangeEvent(name) {
   
 
         console.log("authenticat9ing");
-        return this.http.post('http://196.12.53.138:8086/api/authenticatemobile', data2).map(authenticateSuccess.bind(this));
+        return this.http.post('http://196.12.53.138:8084/api/authenticatemobile', data2).map(authenticateSuccess.bind(this));
 
         function authenticateSuccess (resp) {
             
