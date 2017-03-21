@@ -11,7 +11,7 @@ import { OnInit} from '@angular/core';
  export class DemoComponent{
   
  
-  public uploader:FileUploader = new FileUploader({url:'http://localhost:8080//api/upload/alumni-photos'});
+  public uploader:FileUploader = new FileUploader({url:'http://196.12.53.138:8084/api/upload/alumni-photos'});
   public someValue2 ='hsh';
   
   //
