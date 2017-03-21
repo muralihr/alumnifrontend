@@ -11,9 +11,9 @@ import 'rxjs/add/operator/map'
 @Injectable()
 export class AlumniService {
   apikey: string;
-  private mapUrl = 'http://196.12.53.138:8086/api/alumni'; 
-  private mapUrl2 = 'http://196.12.53.138:8086/api/alumni/';
-  private mapUrl3 = 'http://196.12.53.138:8086/api/alumni-photos_alumni_id/';
+  private mapUrl = 'http://196.12.53.138:8084/api/alumni'; 
+  private mapUrl2 = 'http://196.12.53.138:8084/api/alumni/';
+  private mapUrl3 = 'http://196.12.53.138:8084/api/alumni-photos_alumni_id/';
 
   
   constructor(private _jsonp: Jsonp, public http: Http) {
